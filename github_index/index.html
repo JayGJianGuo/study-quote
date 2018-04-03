@@ -9,6 +9,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="./public/style.css">
   <script src="./public/vue.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -51,18 +52,7 @@
   // 初始化Vue
 
   // 把收集的数据放在这里
-  var wordsList = [
-    {
-      "name": "xugaoyang",
-      "avatar": "https://ws1.sinaimg.cn/large/006tKfTcgy1fi7s7vo8y0j30hs0hsaay.jpg",
-      "words": "我想带领大家感受编程语言JavaScript的魅力，与同学们一起成长我感到非常的荣幸"
-    },
-    {
-      "avatar": "https://avatars0.githubusercontent.com/u/384727?v=4&s=460",
-      "name": "蓉儿",
-      "words": "成为屌屌的全栈设计师"
-    }
-  ];
+  var wordsList = './all_words_info.json'
 
   new Vue({
     el: '#app',   // #app 和html中div#id的 app 对应
@@ -70,5 +60,6 @@
       wordsList: wordsList  // 变量wordsList可以在html使用
     }
   });
+
 
 </script>
