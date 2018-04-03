@@ -28,9 +28,9 @@ fs.readdir(readFilePath, function(err, files){
   for (var i = 0; i < jsonFiles.length; i++) {
     try {
       var content = jsonfile.readFileSync(readFilePath + jsonFiles[i]);
-      jsonList.push(jsonFiles[i]);
+      jsonList.push(content);
     } catch (err) {
-      errorFiles.push(jsonFiles[i]);
+      errorFiles.push(content);
     }
   }
 
